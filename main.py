@@ -7,7 +7,9 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from flask import Flask
 from threading import Thread
+import pyrogram.utils
 
+pyrogram.utils.MIN_CHANNEL_ID = -1009147483647
 app = Client(
     name="Warrior Status",
     api_id=int(os.environ["API_ID"]),
